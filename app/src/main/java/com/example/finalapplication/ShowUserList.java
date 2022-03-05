@@ -1,5 +1,6 @@
 package com.example.finalapplication;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -38,19 +39,18 @@ public class ShowUserList extends RecyclerView.Adapter<ShowUserList.ViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ShowUserList.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ShowUserList.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.fname.setText(data.get(position).getFirst_name());
         holder.lname.setText(data.get(position).getLast_name());
         holder.email.setText(data.get(position).getEmail());
-//        Glide.with(context)
-//                .load(data.get(position).getAvatar())
-//                .into(holder.imageView);
         Picasso.with(context).load(data.get(position).getAvatar()).fit().into(holder.imageView);
         holder.btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(view.getContext(), UserShowDetails.class);
-                intent.putExtra("email",R.id.email);
+                intent.putExtra("fname",data.get(position).getFirst_name());
+                intent.putExtra("lname",data.get(position).getLast_name());
+                intent.putExtra("email",data.get(position).getEmail());
                 view.getContext().startActivity(intent);
             }
         });

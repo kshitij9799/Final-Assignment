@@ -6,14 +6,17 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class UserShowDetails extends AppCompatActivity {
-    private String email;
-    private TextView semail;
+    private String email,fname,lname;
+    private TextView semail,sfname,slname;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_show_details);
 
+        fname = getIntent().getStringExtra("fname");
+        lname = getIntent().getStringExtra("lname");
         email = getIntent().getStringExtra("email");
         semail = findViewById(R.id.email);
+        semail.setText(email);
     }
 }
