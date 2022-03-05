@@ -16,6 +16,7 @@
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="cursive"
             android:gravity="center"
             android:text="Profile"
             android:textColor="#1B1010"
@@ -38,17 +39,17 @@
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
+                android:textColor="#1B1010"
                 android:layout_height="wrap_content"
-                android:textStyle="normal|bold"
                 android:layout_weight="1"
-                android:textSize="48sp"
+                android:textSize="20sp"
                 android:text="First name" />
 
             <TextView
                 android:id="@+id/fname"
+                android:textColor="#1B1010"
                 android:layout_width="wrap_content"
-                android:textSize="48sp"
-                android:textStyle="normal|bold"
+                android:textSize="20sp"
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
@@ -61,24 +62,23 @@
 
             <TextView
                 android:id="@+id/textView8"
-                android:textSize="48sp"
+                android:textColor="#1B1010"
+                android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="normal|bold"
                 android:layout_weight="1"
                 android:text="Last name" />
 
             <TextView
                 android:id="@+id/lname"
-                android:textSize="48sp"
-                android:textStyle="normal|bold"
+                android:textColor="#1B1010"
+                android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:textSize="48sp"
             android:layout_height="wrap_content"
             android:textStyle="normal|bold"
             android:orientation="horizontal"
@@ -86,18 +86,18 @@
 
             <TextView
                 android:id="@+id/textView9"
+                android:textColor="#1B1010"
                 android:layout_width="wrap_content"
-                android:textSize="48sp"
+                android:textSize="20sp"
                 android:layout_height="wrap_content"
-                android:textStyle="normal|bold"
                 android:layout_weight="1"
                 android:text="EmailId" />
 
             <TextView
                 android:id="@+id/email"
-                android:textSize="48sp"
+                android:textColor="#1B1010"
+                android:textSize="20sp"
                 android:layout_width="wrap_content"
-                android:textStyle="normal|bold"
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
