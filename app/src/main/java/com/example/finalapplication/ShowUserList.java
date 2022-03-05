@@ -46,6 +46,13 @@ public class ShowUserList extends RecyclerView.Adapter<ShowUserList.ViewHolder> 
 //                .load(data.get(position).getAvatar())
 //                .into(holder.imageView);
         Picasso.with(context).load(data.get(position).getAvatar()).fit().into(holder.imageView);
+        holder.btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent specPage= new Intent(view.getContext(), UserShowDetails.class);
+                view.getContext().startActivity(specPage);
+            }
+        });
     }
 
     @Override
