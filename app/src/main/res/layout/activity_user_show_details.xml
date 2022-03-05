@@ -6,4 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".UserShowDetails">
 
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

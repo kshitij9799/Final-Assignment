@@ -49,8 +49,9 @@ public class ShowUserList extends RecyclerView.Adapter<ShowUserList.ViewHolder> 
         holder.btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent specPage= new Intent(view.getContext(), UserShowDetails.class);
-                view.getContext().startActivity(specPage);
+                Intent intent= new Intent(view.getContext(), UserShowDetails.class);
+                intent.putExtra("email",R.id.email);
+                view.getContext().startActivity(intent);
             }
         });
     }
