@@ -51,6 +51,7 @@ public class ShowUserList extends RecyclerView.Adapter<ShowUserList.ViewHolder> 
                 intent.putExtra("fname",data.get(position).getFirst_name());
                 intent.putExtra("lname",data.get(position).getLast_name());
                 intent.putExtra("email",data.get(position).getEmail());
+                intent.putExtra("img",data.get(position).getAvatar());
                 view.getContext().startActivity(intent);
             }
         });
