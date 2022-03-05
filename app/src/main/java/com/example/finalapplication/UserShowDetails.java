@@ -16,7 +16,11 @@ public class UserShowDetails extends AppCompatActivity {
         fname = getIntent().getStringExtra("fname");
         lname = getIntent().getStringExtra("lname");
         email = getIntent().getStringExtra("email");
+        sfname = findViewById(R.id.fname);
+        slname = findViewById(R.id.lname);
         semail = findViewById(R.id.email);
+        sfname.setText(fname);
+        slname.setText(lname);
         semail.setText(email);
     }
 }
