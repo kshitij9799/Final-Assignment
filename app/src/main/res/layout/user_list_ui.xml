@@ -49,4 +49,10 @@
         android:layout_weight="1"
         android:src="@drawable/ic_launcher_background" />
 
+    <Button
+        android:id="@+id/showbtn"
+        android:layout_width="46dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Show" />
 </LinearLayout>

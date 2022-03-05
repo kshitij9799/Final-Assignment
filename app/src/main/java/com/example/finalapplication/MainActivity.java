@@ -6,8 +6,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     RecyclerView recycler;
     NestedScrollView nScroll;
+    Button addUser;
     int page = 0, limit = 2;
     ArrayList list;
     ShowUserList adapter;
@@ -31,13 +34,19 @@ public class MainActivity extends AppCompatActivity {
 
         recycler = findViewById(R.id.recycler);
         nScroll = findViewById(R.id.nScroll);
-
+        addUser = findViewById(R.id.adduser);
         list = new ArrayList();
 
-        ArrayList data = new ArrayList();
-//        data.add("1");
-//        data.add("2");
-//        data.add("3");
+
+     addUser.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View view) {
+             Intent i = new Intent(MainActivity.this,AddUser.class);
+             startActivity(i);
+         }
+     });
+
+
 
     listingdata(page, limit);
     nScroll.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
@@ -68,11 +77,6 @@ public class MainActivity extends AppCompatActivity {
                     recycler.setLayoutManager(new LinearLayoutManager(MainActivity.this));
                     recycler.setAdapter(adapter);
                 }else {
-//                    for(int i =0;i<list.size();i++){
-//                        if(!list.contains(response.body().getData().get(i))){
-//                            list.add(response.body().getData().get(i));
-//                        }
-//                    }
 
                     list.addAll(response.body().getData());
 

@@ -1,9 +1,11 @@
 package com.example.finalapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -54,12 +56,14 @@ public class ShowUserList extends RecyclerView.Adapter<ShowUserList.ViewHolder> 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView fname,lname,email;
         ImageView imageView;
+        Button btn;
         public ViewHolder(View itemView) {
             super(itemView);
             fname=itemView.findViewById(R.id.fname);
             lname=itemView.findViewById(R.id.lname);
             email=itemView.findViewById(R.id.email);
             imageView=itemView.findViewById(R.id.img);
+            btn=itemView.findViewById(R.id.showbtn);
         }
     }
 }
